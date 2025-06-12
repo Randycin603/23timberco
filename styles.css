@@ -1,3 +1,4 @@
+/* Base styles */
 body {
   font-family: sans-serif;
   line-height: 1.6;
@@ -17,6 +18,7 @@ header {
 nav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 nav ul li {
@@ -29,11 +31,49 @@ nav ul li a {
   text-decoration: none;
 }
 
-main {
+/* Hero section */
+.hero-section {
+  background-image: url('images/forest-background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* subtle dark overlay */
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ddd;
+}
+
+/* Intro section */
+.intro {
   padding: 2rem;
   text-align: center;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
