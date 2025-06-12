@@ -8,6 +8,7 @@ body {
   color: #333;
 }
 
+/* Navigation */
 header {
   background-color: #333;
   color: white;
@@ -29,17 +30,10 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
 
-#heroVideo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
+/* Hero Section with Video Background */
 .hero-section {
   position: relative;
   height: 100vh;
@@ -51,12 +45,23 @@ nav ul li a {
   color: white;
 }
 
+#heroVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
 .hero-overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* subtle dark overlay */
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 2rem;
   border-radius: 8px;
 }
 
+/* Call-to-Action Button */
 .cta-button {
   display: inline-block;
   margin-top: 1rem;
@@ -73,7 +78,7 @@ nav ul li a {
   background-color: #ddd;
 }
 
-/* Intro section */
+/* Intro Section */
 .intro {
   padding: 2rem;
   text-align: center;
