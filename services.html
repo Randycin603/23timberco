@@ -3,46 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services – 23 Timber Co.</title>
+  <title>Services | 23 Timber Co.</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #1a1a1a;
+    }
+    .services-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 4rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .block {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin: 4rem 0;
+      gap: 2rem;
+    }
+    .block:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .block img {
+      width: 320px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .block-content {
+      max-width: 500px;
+    }
+    .block-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .block-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>23 Timber Co.</h1>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="landowners.html">For Landowners</a></li>
-        <li><a href="contractors.html">For Contractors</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="process.html">Process</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="field-notes.html">Field Notes</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="intro">
-    <h2>Our Services</h2>
-    <p>We offer a range of hands-on land management services designed for private landowners, contractors, and conservation-minded stewards. Whether you're trying to build a better hunting property, restore timber value, or create long-term access and usability, we help make the land work for you — and itself.</p>
-
-    <ul style="text-align:left; max-width:700px; margin:2rem auto;">
-      <li><strong>Property Walkthrough & Habitat Assessment</strong> – Field-based evaluation with recommendations tailored to your goals</li>
-      <li><strong>Food Plot Design & Implementation</strong> – Focused on native browse and seasonal preference, not gimmicks</li>
-      <li><strong>Timber Stand Improvement (TSI)</strong> – Selective thinning to improve growth, access, and long-term yield</li>
-      <li><strong>Access Trails & Equipment Paths</strong> – Designed for seasonal use, maintenance, and long-term durability</li>
-      <li><strong>Mapping & GIS Services</strong> – High-resolution overlays for planning and visualization</li>
-      <li><strong>Seasonal/Winter Work</strong> – Hinge cutting, trail clearing, and habitat audits done when the land is quiet</li>
-    </ul>
-
-    <p style="margin-top: 2rem; font-style: italic; text-align:center;">If you're not sure where to start — we do. Walk with us.</p>
+  <main class="services-section">
+    <div class="block">
+      <img src="images/walkthrough.jpg" alt="Walkthrough" />
+      <div class="block-content">
+        <h2>1. Walkthrough + Strategy Session</h2>
+        <p>We walk the property with you and identify strengths, weak points, and opportunities. You get real-time feedback and a plan that matches your goals — hunting, habitat, timber, or legacy value.</p>
+      </div>
+    </div>
+    <div class="block">
+      <img src="images/habitat-plan.jpg" alt="Habitat Plan" />
+      <div class="block-content">
+        <h2>2. Habitat Plan + Map Overlays</h2>
+        <p>A detailed, actionable plan with GIS overlays, trail routing, bedding zones, food source layout, and recommendations based on seasonal movement and terrain. Great for landowners who want to execute over time or with help.</p>
+      </div>
+    </div>
+    <div class="block">
+      <img src="images/implementation.jpg" alt="Implementation" />
+      <div class="block-content">
+        <h2>3. Full Project Oversight</h2>
+        <p>We manage implementation — clearing, cutting, trail work, water sourcing, plot install, and ongoing review. Ideal for contractors or absentee landowners who want it done right the first time.</p>
+      </div>
+    </div>
   </main>
-
-  <footer>
-    <p>&copy; 2025 23 Timber Co. All rights reserved.</p>
-  </footer>
 </body>
 </html>
