@@ -14,93 +14,24 @@
       background: #fff;
       color: #1a1a1a;
     }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      border-bottom: 1px solid #ddd;
-      flex-wrap: wrap;
-    }
-    header .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    header .logo img {
-      height: 48px;
-    }
-    header .logo h1 {
-      margin: 0;
-      font-size: 1.75rem;
-      font-family: 'Playfair Display', serif;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.25rem;
-      margin: 0;
-      padding: 0;
-      font-size: 1rem;
-      flex-wrap: wrap;
-    }
-    nav a {
-      text-decoration: none;
-      color: #1a1a1a;
-    }
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-top: 1rem;
-      }
-    }
-
-    .about-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 4rem 1rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .block {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      margin: 4rem 0;
-      gap: 2rem;
-    }
-    .block:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-    .block img {
-      width: 320px;
-      height: auto;
-      object-fit: cover;
-      border-radius: 4px;
-    }
-    .block-content {
-      max-width: 500px;
-    }
-    .block-content h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    .block-content p {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-  </style>
-</head>
-<body>
-  <header>
+<header style="background: #2a2a2a; color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+  <div class="logo" style="display: flex; align-items: center; gap: 1rem;">
+    <img src="images/logo.png" alt="23 Timber Co. Logo" style="height: 40px;" />
+    <h1 style="font-family: 'Playfair Display', serif; font-size: 1.6rem; margin: 0;">23 Timber Co.</h1>
+  </div>
+  <nav>
+    <ul style="list-style: none; display: flex; flex-wrap: wrap; gap: 1.25rem; margin: 0; padding: 0; font-size: 1rem;">
+      <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+      <li><a href="about.html" style="color: white; text-decoration: none;">About</a></li>
+      <li><a href="services.html" style="color: white; text-decoration: none;">Services</a></li>
+      <li><a href="landowners.html" style="color: white; text-decoration: none;">Landowners</a></li>
+      <li><a href="contractors.html" style="color: white; text-decoration: none;">Contractors</a></li>
+      <li><a href="faq.html" style="color: white; text-decoration: none;">FAQ</a></li>
+      <li><a href="field-notes.html" style="color: white; text-decoration: none;">Field Notes</a></li>
+      <li><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></li>
+    </ul>
+  </nav>
+</header>
     <div class="logo">
       <img src="images/logo.png" alt="23 Timber Co. Logo" />
       <h1>23 Timber Co.</h1>
