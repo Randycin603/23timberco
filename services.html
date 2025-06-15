@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | 23 Timber Co.</title>
-  <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -14,68 +14,118 @@
       background: #fff;
       color: #1a1a1a;
     }
-    .services-section {
+    header {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
-      padding: 4rem 1rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .block {
-      display: flex;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ddd;
       flex-wrap: wrap;
+    }
+    header .logo {
+      display: flex;
       align-items: center;
-      justify-content: center;
-      margin: 4rem 0;
-      gap: 2rem;
+      gap: 0.75rem;
     }
-    .block:nth-child(even) {
-      flex-direction: row-reverse;
+    header .logo img {
+      height: 48px;
     }
-    .block img {
-      width: 320px;
-      height: auto;
-      object-fit: cover;
-      border-radius: 4px;
+    header .logo h1 {
+      margin: 0;
+      font-size: 1.75rem;
+      font-family: 'Playfair Display', serif;
     }
-    .block-content {
-      max-width: 500px;
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.25rem;
+      margin: 0;
+      padding: 0;
+      font-size: 1rem;
+      flex-wrap: wrap;
     }
-    .block-content h2 {
+    nav a {
+      text-decoration: none;
+      color: #1a1a1a;
+    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 4rem;
+    }
+    h2 {
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
-    .block-content p {
+    p {
       font-size: 1rem;
       line-height: 1.6;
+    }
+    .tier {
+      background: #f5f5f5;
+      padding: 1.5rem;
+      border-left: 4px solid #4a7039;
+      margin-bottom: 2rem;
+      border-radius: 4px;
+    }
+    .tier h3 {
+      margin-top: 0;
+      font-size: 1.25rem;
     }
   </style>
 </head>
 <body>
-  <main class="services-section">
-    <div class="block">
-      <img src="images/walkthrough.jpg" alt="Walkthrough" />
-      <div class="block-content">
-        <h2>1. Walkthrough + Strategy Session</h2>
-        <p>We walk the property with you and identify strengths, weak points, and opportunities. You get real-time feedback and a plan that matches your goals — hunting, habitat, timber, or legacy value.</p>
-      </div>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="23 Timber Co. Logo" />
+      <h1>23 Timber Co.</h1>
     </div>
-    <div class="block">
-      <img src="images/habitat-plan.jpg" alt="Habitat Plan" />
-      <div class="block-content">
-        <h2>2. Habitat Plan + Map Overlays</h2>
-        <p>A detailed, actionable plan with GIS overlays, trail routing, bedding zones, food source layout, and recommendations based on seasonal movement and terrain. Great for landowners who want to execute over time or with help.</p>
-      </div>
-    </div>
-    <div class="block">
-      <img src="images/implementation.jpg" alt="Implementation" />
-      <div class="block-content">
-        <h2>3. Full Project Oversight</h2>
-        <p>We manage implementation — clearing, cutting, trail work, water sourcing, plot install, and ongoing review. Ideal for contractors or absentee landowners who want it done right the first time.</p>
-      </div>
-    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="landowners.html">Landowners</a></li>
+        <li><a href="contractors.html">Contractors</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Our Services</h2>
+    <p>We offer flexible options to fit landowners and professionals at all levels — from a simple walkthrough to turnkey property transformation.</p>
+
+    <section class="tier">
+      <h3>Tier 1: Property Walkthrough & Consultation</h3>
+      <p>A detailed site walk to evaluate habitat potential, timber value, invasive threats, and access or layout weaknesses. We'll provide recommendations in plain terms, tailored to your goals.</p>
+    </section>
+
+    <section class="tier">
+      <h3>Tier 2: Habitat Plan + Timber & Wildlife Strategy</h3>
+      <p>A written plan and map overlays detailing phased improvements, stand selection, planting suggestions, bedding strategies, travel corridor development, and soil/water recommendations. Great for self-directed landowners or contractors needing clear next steps.</p>
+    </section>
+
+    <section class="tier">
+      <h3>Tier 3: Full-Service Implementation</h3>
+      <p>We coordinate, execute, and monitor the entire land plan — handling subcontractors, forestry oversight, permits, planting schedules, and ongoing stewardship. Our crew can handle the boots-on-ground execution for you.</p>
+    </section>
   </main>
 </body>
 </html>
