@@ -1,40 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>Index – 23 Timber Co.</title>
-<link rel='stylesheet' href='styles.css'>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home – 23 Timber Co.</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="logo">
+      <img src="images/logo.png" alt="23 Timber Co. Logo" />
+      <h1>23 Timber Co.</h1>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="landowners.html">Landowners</a></li>
+        <li><a href="contractors.html">Contractors</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="field-notes.html">Field Notes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <div class="logo">
-    <img src="images/logo-white.png" alt="23 Timber Co. Logo" />
-  </div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="landowners.html">Landowners</a></li>
-      <li><a href="contractors.html">Contractors</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="process.html">Process</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="field-notes.html">Field Notes</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <main>
+    <section class="hero-video">
+      <video autoplay muted loop playsinline id="bg-video">
+        <source src="video/deer-loop.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-overlay">
+        <h2>We manage land for those serious about getting it right.</h2>
+        <p>Habitat, timber, and strategy — done with purpose.</p>
+        <a href="contact.html" class="cta-button">Start Your Land Plan</a>
+      </div>
+    </section>
 
-<main>
-<h1>Welcome to 23 Timber Co.</h1><p>We manage land for those serious about getting it right.</p>
-</main>
+    <section class="intro">
+      <h3>Land Management for Owners and Operators</h3>
+      <p>We work with landowners who want more than a food plot, and with contractors who need boots-on-ground strategy backed by data and experience.</p>
+    </section>
+  </main>
 
-<footer>
-  <p style="text-align:center; color: #999; font-size: 0.9rem;">&copy; 2025 23 Timber Co. All rights reserved.</p>
-</footer>
-
+  <footer>
+    <p>&copy; 2025 23 Timber Co. All rights reserved.</p>
+  </footer>
 </body>
 </html>
