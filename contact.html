@@ -1,1 +1,56 @@
-<!DOCTYPE html><html><head><title>Contact</title></head><body><h1>Contact Page</h1></body></html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – 23 Timber Co.</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>23 Timber Co.</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="landowners.html">For Landowners</a></li>
+        <li><a href="contractors.html">For Contractors</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="field-notes.html">Field Notes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="intro">
+    <h2>Contact Us</h2>
+    <p>Use the form below or email <strong>info@23timberco.com</strong> to get started. We’ll reach out within 1–2 business days.</p>
+
+    <form action="https://formspree.io/f/mnqewgdp" method="POST" style="max-width:600px; margin:2rem auto; text-align:left;">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="_replyto" required /><br /><br />
+
+      <label for="location">Property Location (Town + State):</label><br />
+      <input type="text" id="location" name="location" required /><br /><br />
+
+      <label for="interest">What are you looking for?</label><br />
+      <textarea id="interest" name="interest" rows="4" required></textarea><br /><br />
+
+      <button type="submit" class="cta-button">Send Message</button>
+    </form>
+
+    <p style="text-align:center;">Want to walk the land together? Let us know where and when.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 23 Timber Co. All rights reserved.</p>
+  </footer>
+</body>
+</html>
