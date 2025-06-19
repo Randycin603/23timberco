@@ -91,3 +91,12 @@ footer {
   background-color: #222;
   color: #ccc;
 }
+.landowner-background {
+  background-image: url('images/pinetreeforest.jpeg'); /* adjust path if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 2rem;
+  color: white; /* optional, adjust based on image contrast */
+}
