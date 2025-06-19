@@ -92,7 +92,7 @@ footer {
   color: #ccc;
 }
 .landowner-background {
-  background-image: url('images/pinetreeforest.jpeg'); /* adjust path if needed */
+  background-image: url('images/pinetreeforest.jpg'); /* adjust path if needed */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
