@@ -1,62 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta name="theme-color" content="#0f1410">
-<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/video/deer-loop.mp4" as="video" type="video/mp4">
-<meta property="og:site_name" content="23 Timber Co.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="/images/og-forest.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Land Management Services | 23 Timber Co.</title>
+  <meta name="description" content="TSI, food plots, mapping, access trails, and seasonal work — tailored to your goals and land.">
+
+  <!-- Shared head additions -->
+  <meta name="theme-color" content="#0f1410">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <!-- If you don't use the video on this page, you can remove this preload -->
+  <link rel="preload" href="video/deer-loop.mp4" as="video" type="video/mp4">
+  <meta property="og:site_name" content="23 Timber Co.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-forest.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
 <body>
- <header>
-  <div class="container nav" role="navigation">
-    <a class="brand" href="index.html" aria-label="23 Timber Co home">
-      <!-- Simple SVG pine icon -->
-      <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2l6 8h-4l4 6h-5v4h-2v-4H6l4-6H6l6-8z"/></svg>
-      <span>23 Timber Co.</span>
-    </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Open menu">Menu</button>
-    <nav id="primary-menu">
-      <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="landowners.html">For Landowners</a></li>
-        <li><a href="contractors.html">For Contractors</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="process.html">Process</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="field-notes.html">Field Notes</a></li>
-        <li><a href="contact.html" class="button">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <!-- New header -->
+  <header>
+    <div class="container nav" role="navigation">
+      <a class="brand" href="index.html" aria-label="23 Timber Co home">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2l6 8h-4l4 6h-5v4h-2v-4H6l4-6H6l6-8z"/></svg>
+        <span>23 Timber Co.</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Open menu">Menu</button>
+      <nav id="primary-menu">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="landowners.html">For Landowners</a></li>
+          <li><a href="contractors.html">For Contractors</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="field-notes.html">Field Notes</a></li>
+          <li><a href="contact.html" class="button">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <main class="intro">
     <h2>Our Services</h2>
     <p>We offer a range of hands-on land management services designed for private landowners, contractors, and conservation-minded stewards. Whether you're trying to build a better hunting property, restore timber value, or create long-term access and usability, we help make the land work for you — and itself.</p>
 
     <ul style="text-align:left; max-width:700px; margin:2rem auto;">
-      <li><strong>Property Walkthrough & Habitat Assessment</strong> – Field-based evaluation with recommendations tailored to your goals</li>
-      <li><strong>Food Plot Design & Implementation</strong> – Focused on native browse and seasonal preference, not gimmicks</li>
+      <li><strong>Property Walkthrough &amp; Habitat Assessment</strong> – Field-based evaluation with recommendations tailored to your goals</li>
+      <li><strong>Food Plot Design &amp; Implementation</strong> – Focused on native browse and seasonal preference, not gimmicks</li>
       <li><strong>Timber Stand Improvement (TSI)</strong> – Selective thinning to improve growth, access, and long-term yield</li>
-      <li><strong>Access Trails & Equipment Paths</strong> – Designed for seasonal use, maintenance, and long-term durability</li>
-      <li><strong>Mapping & GIS Services</strong> – High-resolution overlays for planning and visualization</li>
+      <li><strong>Access Trails &amp; Equipment Paths</strong> – Designed for seasonal use, maintenance, and long-term durability</li>
+      <li><strong>Mapping &amp; GIS Services</strong> – High-resolution overlays for planning and visualization</li>
       <li><strong>Seasonal/Winter Work</strong> – Hinge cutting, trail clearing, and habitat audits done when the land is quiet</li>
     </ul>
 
     <p style="margin-top: 2rem; font-style: italic; text-align:center;">If you're not sure where to start — we do. Walk with us.</p>
   </main>
-<footer>
-  <div class="container footer-inner">
-    <div>© 2025 23 Timber Co. • Habitat • Timber • Legacy</div>
-    <div class="footer-links">
-      <a href="services.html">Services</a>
-      <a href="process.html">Process</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
+
+  <!-- New footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2025 23 Timber Co. • Habitat • Timber • Legacy</div>
+      <div class="footer-links">
+        <a href="services.html">Services</a>
+        <a href="process.html">Process</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
+
+  <!-- Tiny mobile-nav JS (add this to every page) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const btn = document.querySelector('.nav-toggle');
+      const navWrap = document.querySelector('header .nav');
+      btn?.addEventListener('click', ()=>{
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        navWrap.classList.toggle('open');
+      });
+    });
+  </script>
 </body>
 </html>
