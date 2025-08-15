@@ -1,61 +1,82 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>For Contractors – 23 Timber Co.</title>
+  <title>For Contractors – Site Clearing & Access | 23 Timber Co.</title>
+  <meta name="description" content="Reliable site clearing, erosion control, and access lanes with attention to slope, soils, and drainage.">
+  <meta name="theme-color" content="#0f1410">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <meta property="og:site_name" content="23 Timber Co.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-forest.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>23 Timber Co.</h1>
+<a href="#main" class="skip">Skip to content</a>
+<header>
+  <div class="container nav" role="navigation">
+    <a class="brand" href="index.html" aria-label="23 Timber Co home">
+      <img src="images/logo.svg" alt="23 Timber Co." />
+      <span>23 Timber Co.</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Open menu">Menu</button>
+    <nav id="primary-menu">
       <ul>
-        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="landowners.html">For Landowners</a></li>
-        <li><a href="contractors.html">For Contractors</a></li>
+        <li><a href="contractors.html" aria-current="page">For Contractors</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="process.html">Process</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="field-notes.html">Field Notes</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="button">Contact</a></li>
       </ul>
     </nav>
-  </header>
-
-  <main class="intro">
-    <h2>For Contractors</h2>
-    
-
-<section class="contractor-services" style="max-width: 800px; margin: 3rem auto; padding: 0 1rem; text-align: left;">
-<section class="contractor-services" style="max-width: 800px; margin: 3rem auto; padding: 0 1rem; text-align: left;">
-
-  <div class="service-block" style="margin-top: 2rem;">
-    <h4>Site Clearing & Prep</h4>
-    <p>We handle complete site clearing — trees, brush, stumps, and surface debris — to prepare your site for excavation, grading, or foundation work. Stumps can be ground or fully removed based on your specs. All debris is cleared and hauled off unless otherwise directed.
-
-We’re efficient, but we don’t cut corners. That means paying attention to slope, soil conditions, and drainage — so the site is workable the moment we’re done. If tree preservation or buffer zones are part of the plan, we’ll flag and protect them during clearing. Whether it’s a tight residential lot or a multi-acre parcel, we get it clean, accessible, and ready for the next crew.</p>
   </div>
-
-  <div class="service-block" style="margin-top: 2rem;">
-    <h4>Erosion Control & Compliance Prep</h4>
-    <p>We install silt fence, straw wattles, and erosion control ahead of clearing when conservation commission sign-off is required. We can handle the pre-clearing walk with ConCom and make sure things are tight before the work begins.</p>
+</header>
+<main id="main" class="intro">
+  <h1>For Contractors</h1>
+  <p class="lede">Reliable site clearing, erosion control, and access lanes — built with slope, soils, and drainage in mind.</p>
+  <section class="section narrow">
+    <div class="container cards">
+      <article class="card"><h4>Site Clearing &amp; Prep</h4><p>Trees, brush, stumps, debris — flagged buffer zones protected.</p></article>
+      <article class="card"><h4>Erosion Control &amp; Compliance</h4><p>Silt fence, wattles, and pre-clearing walks with ConCom when required.</p></article>
+      <article class="card"><h4>Trail &amp; Equipment Access</h4><p>Temporary or permanent access lanes for machines and utilities.</p></article>
+    </div>
+  </section>
+  <p><a href="contact.html" class="cta-button">Partner With Us</a></p>
+</main>
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-meta">© 2025 23 Timber Co. • Habitat • Timber • Legacy • Serving NH & Eastern MA</div>
+    <div class="footer-links">
+      <a href="tel:+1-781-555-0123">781-555-0123</a>
+      <a href="mailto:info@23timberco.com">info@23timberco.com</a>
+      <a href="services.html">Services</a>
+      <a href="process.html">Process</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </div>
-
-  <div class="service-block" style="margin-top: 2rem;">
-    <h4>Trail & Equipment Access</h4>
-    <p>We cut temporary or permanent access lanes for machines, utility runs, or inspection paths. Cleared with slope, water flow, and future use in mind.</p>
-  </div>
-</section>
-
-    <p style="margin-top: 2rem; text-align:center;"><a href="contact.html" class="cta-button">Partner With Us</a></p>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 23 Timber Co. All rights reserved.</p>
-  </footer>
+</footer>
+<script>
+  document.addEventListener('scroll', ()=> {
+    document.documentElement.classList.toggle('is-scrolled', window.scrollY>4);
+  });
+  document.addEventListener('DOMContentLoaded', ()=>{
+    const btn=document.querySelector('.nav-toggle'); const wrap=document.querySelector('header .nav');
+    const links=[...document.querySelectorAll('#primary-menu a')];
+    const toggle=()=>{
+      const open=wrap.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+      document.documentElement.classList.toggle('no-scroll', open);
+    };
+    btn?.addEventListener('click', toggle);
+    links.forEach(a=>a.addEventListener('click', ()=>{ if(wrap.classList.contains('open')) toggle(); }));
+  });
+</script>
 </body>
 </html>

@@ -1,20 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn about 23 Timber Co.'s mission, methodology, and commitment to high-standard land management rooted in experience and best practices.">
-  <title>About | 23 Timber Co.</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – Land Management That Scales | 23 Timber Co.</title>
+  <meta name="description" content="Our systems-based approach blends habitat science with boots-on-ground experience for results that last.">
+  <meta name="theme-color" content="#0f1410">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <meta property="og:site_name" content="23 Timber Co.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-forest.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
- <header>
-    <nav>
-      <h1>23 Timber Co.</h1>
+<a href="#main" class="skip">Skip to content</a>
+<header>
+  <div class="container nav" role="navigation">
+    <a class="brand" href="index.html" aria-label="23 Timber Co home">
+      <img src="images/logo.svg" alt="23 Timber Co." />
+      <span>23 Timber Co.</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Open menu">Menu</button>
+    <nav id="primary-menu">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="landowners.html">For Landowners</a></li>
         <li><a href="contractors.html">For Contractors</a></li>
@@ -22,49 +32,50 @@
         <li><a href="process.html">Process</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="field-notes.html">Field Notes</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="button">Contact</a></li>
       </ul>
     </nav>
-  </header>
-
-  <main class="about">
-    <section class="hero-about">
-      <h2>Built on Experience. Backed by Science.</h2>
-      <p>Land isn’t a product — it’s a system. We treat it that way.</p>
-    </section>
-
-    <section class="section">
-      <h3>The Problem</h3>
-      <p>Too many land plans focus on a single piece of the puzzle — food plots, trails, timber — without considering how it all fits together. That fragmented approach leads to wasted effort, disappointed landowners, and poor results in the field.</p>
-    </section>
-
-    <section class="section">
-      <h3>Our Approach</h3>
-      <p>23 Timber Co. uses a systems-based method that combines modern habitat science with decades of practical experience. We align our work with the principles promoted by groups like the National Deer Association (NDA) and the U.S. Forest Service — without affiliation — because they represent a gold standard in effective, ethical land stewardship.</p>
-    </section>
-
-    <section class="section-highlight">
-      <h4>Informed by Proven Frameworks</h4>
-      <ul>
-        <li>Timber Stand Improvement (TSI)</li>
-        <li>QDM & NDA-aligned habitat plans</li>
-        <li>Water, access, and cover integration</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h3>Why We're Different</h3>
-      <p>This company was founded by someone with a background in executive-level construction management — where budgets matter, sequencing counts, and nothing works without a plan. We apply that same thinking to every acre we touch, whether it’s a one-acre kill plot or a 1,000-acre phased development.</p>
-    </section>
-
-    <section class="section">
-      <h3>Scalable, Serious Work</h3>
-      <p>We take on projects of all sizes with the same intent: to create better land, not just different land. Whether you're a landowner building legacy ground or a contractor looking for boots-on-ground intelligence, 23 Timber Co. is designed to scale — and deliver.</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 23 Timber Co. All rights reserved.</p>
-  </footer>
+  </div>
+</header>
+<section id="main" class="hero-about">
+  <div class="container">
+    <h1>About 23 Timber Co.</h1>
+    <p class="lede">A systems-based approach that blends habitat science with boots-on-ground execution.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <p>We manage land for owners and operators who want durable results: healthier habitat, smarter access, and timber value that compounds. Our work is field-first and outcome-driven — no fluff, no shortcuts.</p>
+  </div>
+</section>
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-meta">© 2025 23 Timber Co. • Habitat • Timber • Legacy • Serving NH & Eastern MA</div>
+    <div class="footer-links">
+      <a href="tel:+1-781-555-0123">781-555-0123</a>
+      <a href="mailto:info@23timberco.com">info@23timberco.com</a>
+      <a href="services.html">Services</a>
+      <a href="process.html">Process</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+<script>
+  document.addEventListener('scroll', ()=> {
+    document.documentElement.classList.toggle('is-scrolled', window.scrollY>4);
+  });
+  document.addEventListener('DOMContentLoaded', ()=>{
+    const btn=document.querySelector('.nav-toggle'); const wrap=document.querySelector('header .nav');
+    const links=[...document.querySelectorAll('#primary-menu a')];
+    const toggle=()=>{
+      const open=wrap.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+      document.documentElement.classList.toggle('no-scroll', open);
+    };
+    btn?.addEventListener('click', toggle);
+    links.forEach(a=>a.addEventListener('click', ()=>{ if(wrap.classList.contains('open')) toggle(); }));
+  });
+</script>
 </body>
 </html>
