@@ -13,30 +13,10 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="styles.css" />
 </head>
+<script src="assets/include.js"></script>
 <body>
 <a href="#main" class="skip">Skip to content</a>
-<header>
-  <div class="container nav" role="navigation">
-    <a class="brand" href="index.html" aria-label="23 Timber Co home">
-      <img src="images/logo-bear.png" alt="23 Timber Co." />
-      <span>23 Timber Co.</span>
-    </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Open menu">Menu</button>
-    <nav id="primary-menu">
-      <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="landowners.html">For Landowners</a></li>
-        <li><a href="contractors.html">For Contractors</a></li>
-        <li><a href="projects.html" aria-current="page">Projects</a></li>
-        <li><a href="process.html">Process</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="field-notes.html">Field Notes</a></li>
-        <li><a href="contact.html" class="button">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+<div id="site-header"></div>
 <main id="main" class="intro">
   <h1>Our Projects</h1>
   <p class="lede">Each property tells a different story — and our work helps that story unfold the right way.</p>
@@ -51,19 +31,7 @@
     </div>
   </div>
 </section>
-<footer>
-  <div class="container footer-inner">
-    <div class="footer-meta">© 2025 23 Timber Co. • Habitat • Timber • Legacy • Serving NH & Eastern MA</div>
-    <div class="footer-links">
-      <a href="tel:+1-781-555-0123">781-555-0123</a>
-      <a href="mailto:info@23timberco.com">info@23timberco.com</a>
-      <a href="services.html">Services</a>
-      <a href="process.html">Process</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </div>
-</footer>
+<div id="site-footer"></div>
 <script>
   document.addEventListener('scroll', ()=> {
     document.documentElement.classList.toggle('is-scrolled', window.scrollY>4);
