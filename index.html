@@ -1,62 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>23 Timber Co.</title>
-  <meta name="description" content="Land management and habitat consulting for landowners and contractors serious about getting it right.">
-  <meta name="theme-color" content="#0f1410">
-  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="video/deer-loop.mp4" as="video" type="video/mp4">
-  <meta property="og:site_name" content="23 Timber Co.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="images/og-forest.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
-<script src="assets/include.js"></script>
 <body>
-<a href="#main" class="skip">Skip to content</a>
-<div id="site-header"></div>
-<main id="main" class="hero">
-  <video autoplay muted loop playsinline id="heroVideo" poster="images/hero-poster.jpg">
-    <source src="video/deer-loop.mp4" type="video/mp4" />
-  </video>
-  <div class="overlay">
-    <h2>We manage land for those serious about getting it right.</h2>
-    <p>Habitat. Timber. Legacy.</p>
-    <a href="contact.html" class="cta-button">Walk With Us</a>
-  </div>
-</main>
-<section class="section">
-  <div class="container">
-    <h3>Land Management for Owners and Operators</h3>
-    <p class="lede">We work with landowners who want more than a food plot, and with contractors who need boots-on-ground strategy that lasts.</p>
-  </div>
-</section>
-<div id="site-footer"></div>
-<script>
-  document.addEventListener('scroll', ()=> {
-    document.documentElement.classList.toggle('is-scrolled', window.scrollY>4);
-  });
-  document.addEventListener('DOMContentLoaded', ()=>{
-    const btn=document.querySelector('.nav-toggle'); const wrap=document.querySelector('header .nav');
-    const links=[...document.querySelectorAll('#primary-menu a')];
-    const toggle=()=>{
-      const open=wrap.classList.toggle('open');
-      btn?.setAttribute('aria-expanded', String(open));
-      document.documentElement.classList.toggle('no-scroll', open);
-    };
-    btn?.addEventListener('click', toggle);
-    links.forEach(a=>a.addEventListener('click', ()=>{ if(wrap.classList.contains('open')) toggle(); }));
-  });
-</script>
-<script>
-  const v=document.getElementById('heroVideo');
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    if(v){ v.removeAttribute('autoplay'); v.pause?.(); }
-  }
-</script>
+  <a href="#main" class="skip">Skip to content</a>
 
+  <!-- Shared header will load here -->
+  <div id="site-header"></div>
+
+  <main id="main" class="hero">
+    <video autoplay muted loop playsinline id="heroVideo" poster="images/hero-poster.jpg">
+      <source src="video/deer-loop.mp4" type="video/mp4">
+    </video>
+    <div class="overlay">
+      <h2>We manage land for those serious about getting it right.</h2>
+      <p>Habitat. Timber. Legacy.</p>
+      <a href="contact.html" class="cta-button">Walk With Us</a>
+    </div>
+  </main>
+
+  <section class="section">
+    <div class="container">
+      <h3>Land Management for Owners and Operators</h3>
+      <p class="lede">We work with landowners who want more than a food plot, and with contractors who need boots-on-ground strategy that lasts.</p>
+    </div>
+  </section>
+
+  <!-- Shared footer will load here -->
+  <div id="site-footer"></div>
+
+  <script src="assets/include.js"></script>
+  <script>
+    // Handle sticky header shadow
+    document.addEventListener('scroll', () => {
+      document.documentElement.classList.toggle('is-scrolled', window.scrollY > 4);
+    });
+    // Handle reduced motion (disable autoplay if set)
+    document.addEventListener('DOMContentLoaded', () => {
+      const v = document.getElementById('heroVideo');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        if (v) { v.removeAttribute('autoplay'); v.pause?.(); }
+      }
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Field Notes – Observations from the Woods | 23 Timber Co.</title>
+  <meta name="description" content="Updates and insights on silviculture, native forage, burns, and more.">
+  <meta name="theme-color" content="#0f1410">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <meta property="og:site_name" content="23 Timber Co.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-forest.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<script src="assets/include.js"></script>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+<div id="site-header"></div>
+<main id="main" class="intro">
+  <h1>Field Notes</h1>
+  <p class="lede">Updates, observations, and insights from the woods.</p>
+</main>
+<section class="section">
+  <div class="container cards">
+    <article class="card"><h4>Note 001 — Timing a Timber Cut</h4><p><em>April 2025</em></p><p>Match silviculture goals with habitat gains — and when to walk away.</p></article>
+    <article class="card"><h4>Note 002 — Five Overlooked Native Forages</h4><p><em>March 2025</em></p><p>Scout and encourage regrowth through proper TSI.</p></article>
+    <article class="card"><h4>Note 003 — When Fire Belongs on Your Land</h4><p><em>February 2025</em></p><p>Safety, season, fuel load, and regulatory basics.</p></article>
+  </div>
+</section>
+<div id="site-footer"></div>
+<script>
+  document.addEventListener('scroll', ()=> {
+    document.documentElement.classList.toggle('is-scrolled', window.scrollY>4);
+  });
+  document.addEventListener('DOMContentLoaded', ()=>{
+    const btn=document.querySelector('.nav-toggle'); const wrap=document.querySelector('header .nav');
+    const links=[...document.querySelectorAll('#primary-menu a')];
+    const toggle=()=>{
+      const open=wrap.classList.toggle('open');
+      btn?.setAttribute('aria-expanded', String(open));
+      document.documentElement.classList.toggle('no-scroll', open);
+    };
+    btn?.addEventListener('click', toggle);
+    links.forEach(a=>a.addEventListener('click', ()=>{ if(wrap.classList.contains('open')) toggle(); }));
+  });
+</script>
+</body>
+</html>
