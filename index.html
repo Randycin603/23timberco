@@ -1,182 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>23 Timber Co.</title>
-  <link rel="stylesheet" href="styles.css"/>
-
-  <!-- Minimal inline styles so this works immediately -->
-  <style>
-    /* Base theme */
-    :root { --edge: 24px; --radius-card:16px; --radius-btn:10px; }
-    html, body { background:#fff; color:#000; margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; }
-    a { color:#000; text-decoration:none; }
-    a:hover { opacity:.8; }
-    .container { max-width:1200px; margin:0 auto; padding:0 var(--edge); }
-
-    /* Buttons */
-    .btn { display:inline-block; padding:10px 16px; border-radius:var(--radius-btn); border:1px solid #000; font-weight:600; }
-    .btn--contact:hover { background:#000; color:#fff; }
-    .btn--primary { background:#0a0; color:#fff; border-color:#0a0; }
-    .btn--primary:hover { filter:brightness(.92); }
-
-    /* Skip */
-    .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}
-    .skip:focus{left:var(--edge);top:10px;width:auto;height:auto;background:#000;color:#fff;padding:8px 12px;border-radius:8px;}
-
-    /* ---------- HEADER LAYOUTS ---------- */
-    /* Hide all headers by default */
-    .header-a, .header-b, .header-c { display:none; }
-    .site-header { position:sticky; top:0; z-index:50; background:#fff; border-bottom:1px solid #eee; box-shadow:0 2px 10px rgba(0,0,0,.05); }
-
-    /* A: centered logo with split nav */
-    body.layout-a .header-a { display:block; }
-    .header-a .nav { display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:12px; padding:14px 0; }
-    .header-a .nav-left, .header-a .nav-right { display:flex; gap:20px; align-items:center; }
-    .header-a .nav-left { justify-self:start; }
-    .header-a .nav-right { justify-self:end; }
-    .brand { display:flex; align-items:center; gap:10px; }
-    .brand img { height:40px; width:auto; border-radius:8px; }
-    .brand span { font-weight:800; letter-spacing:.2px; }
-
-    /* B: masthead block above a subnav */
-    body.layout-b .header-b { display:block; }
-    .header-b .masthead { display:grid; grid-template-columns:auto 1fr auto; gap:16px; align-items:center; padding:14px 0; }
-    .masthead .logo { height:56px; width:auto; border-radius:10px; }
-    .masthead h1 { margin:0; font-size:22px; }
-    .tagline { margin:2px 0 0; color:#444; }
-    .subnav { display:flex; gap:20px; padding:10px 0 14px; border-top:1px solid #eee; }
-
-    /* C: sidebar logo (desktop), collapses to top bar on mobile) */
-    body.layout-c .header-c { display:block; }
-    .header-c .shell { display:grid; grid-template-columns:240px 1fr; }
-    .header-c aside { border-right:1px solid #eee; min-height:100vh; position:sticky; top:0; padding:20px var(--edge); }
-    .header-c .sidebrand { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
-    .header-c .sidebrand img { height:48px; border-radius:10px; }
-    .header-c nav { display:flex; flex-direction:column; gap:12px; }
-    .header-c .topbar { display:none; }
-    @media (max-width: 900px){
-      .header-c .shell { grid-template-columns:1fr; }
-      .header-c aside { display:none; }
-      .header-c .topbar { display:block; }
-      .header-c .topbar .row { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:12px var(--edge); }
-    }
-
-    /* Snake-link effect */
-    .snake-link { position:relative; display:inline-block; overflow:hidden; }
-    .snake-link span { position:relative; z-index:2; }
-    .snake-link::before {
-      content:"";
-      position:absolute; top:0; left:-110%;
-      width:110%; height:100%;
-      background: #0a0; transform:skewX(-18deg);
-      transition:left .45s ease-in-out;
-      z-index:1; opacity:.15; /* subtle */
-    }
-    .snake-link:hover::before, .snake-link.snake-active::before { left:110%; }
-
-    /* ---------- HERO ---------- */
-    .hero { position:relative; height:72vh; min-height:420px; display:flex; align-items:center; justify-content:center; overflow:hidden; }
-    .hero video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:contrast(.9) saturate(.9) brightness(.9); }
-    .overlay { position:relative; z-index:1; text-align:center; background:rgba(255,255,255,.85); padding:24px; border-radius:18px; backdrop-filter:saturate(1.2) blur(2px); }
-    .overlay h2 { margin:0 0 6px; font-size: clamp(22px, 4vw, 36px); }
-    .overlay p { margin:0 0 14px; color:#333; }
-    .cta-button { display:inline-block; padding:12px 18px; border-radius:var(--radius-btn); border:1px solid #000; font-weight:700; }
-
-    /* ---------- SECTIONS ---------- */
-    .section { padding:56px 0; }
-    .lede { max-width:72ch; color:#333; }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
-<!-- Pick the layout by changing the class below to layout-a / layout-b / layout-c -->
-<body class="layout-a">
+<body>
   <a href="#main" class="skip">Skip to content</a>
 
-  <!-- ======= HEADER A: centered logo with split nav ======= -->
-  <header class="site-header header-a">
-    <div class="nav container">
-      <ul class="nav-left">
-        <li><a class="snake-link" href="about.html"><span>About</span></a></li>
-        <li><a class="snake-link" href="services.html"><span>Services</span></a></li>
-        <li><a class="snake-link" href="landowners.html"><span>For Landowners</span></a></li>
-      </ul>
+  <!-- Shared header will load here -->
+  <div id="site-header"></div>
 
-      <a href="index.html" class="brand">
-        <img src="images/logo-bear.png" alt="23 Timber Co. logo"/>
-        <span>23 Timber Co.</span>
-      </a>
-
-      <ul class="nav-right">
-        <li><a class="snake-link" href="contractors.html"><span>For Contractors</span></a></li>
-        <li><a class="snake-link" href="projects.html"><span>Projects</span></a></li>
-        <li><a class="snake-link" href="field-notes.html"><span>Field Notes</span></a></li>
-        <li><a class="btn btn--contact" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <!-- ======= HEADER B: masthead block + subnav ======= -->
-  <header class="site-header header-b">
-    <div class="masthead container">
-      <img src="images/logo-bear.png" alt="23 Timber Co. logo" class="logo"/>
-      <div>
-        <h1>23 Timber Co.</h1>
-        <p class="tagline">We manage land for those serious about getting it right.</p>
-      </div>
-      <a class="btn btn--contact" href="contact.html">Contact</a>
-    </div>
-    <nav class="subnav container">
-      <a class="snake-link" href="about.html"><span>About</span></a>
-      <a class="snake-link" href="services.html"><span>Services</span></a>
-      <a class="snake-link" href="landowners.html"><span>For Landowners</span></a>
-      <a class="snake-link" href="contractors.html"><span>For Contractors</span></a>
-      <a class="snake-link" href="projects.html"><span>Projects</span></a>
-      <a class="snake-link" href="process.html"><span>Process</span></a>
-      <a class="snake-link" href="faq.html"><span>FAQ</span></a>
-      <a class="snake-link" href="field-notes.html"><span>Field Notes</span></a>
-    </nav>
-  </header>
-
-  <!-- ======= HEADER C: sidebar logo (desktop) / topbar (mobile) ======= -->
-  <header class="site-header header-c">
-    <div class="shell">
-      <aside>
-        <a href="index.html" class="sidebrand">
-          <img src="images/logo-bear.png" alt="23 Timber Co. logo"/>
-          <strong>23 Timber Co.</strong>
-        </a>
-        <nav>
-          <a class="snake-link" href="about.html"><span>About</span></a>
-          <a class="snake-link" href="services.html"><span>Services</span></a>
-          <a class="snake-link" href="landowners.html"><span>For Landowners</span></a>
-          <a class="snake-link" href="contractors.html"><span>For Contractors</span></a>
-          <a class="snake-link" href="projects.html"><span>Projects</span></a>
-          <a class="snake-link" href="process.html"><span>Process</span></a>
-          <a class="snake-link" href="faq.html"><span>FAQ</span></a>
-          <a class="snake-link" href="field-notes.html"><span>Field Notes</span></a>
-          <a class="btn btn--contact" href="contact.html">Contact</a>
-        </nav>
-      </aside>
-      <div class="topbar">
-        <div class="row">
-          <a href="index.html" class="brand"><img src="images/logo-bear.png" alt="" style="height:36px;border-radius:8px;"/><span>23 Timber Co.</span></a>
-          <a class="btn btn--contact" href="contact.html">Contact</a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- ======= MAIN ======= -->
   <main id="main" class="hero">
     <video autoplay muted loop playsinline id="heroVideo" poster="images/hero-poster.jpg">
-      <source src="video/deer-loop.mp4" type="video/mp4"/>
+      <source src="video/deer-loop.mp4" type="video/mp4">
     </video>
-    <div class="overlay container">
+    <div class="overlay">
       <h2>We manage land for those serious about getting it right.</h2>
       <p>Habitat. Timber. Legacy.</p>
-      <a href="contact.html" class="btn cta-button">Walk With Us</a>
+      <a href="contact.html" class="cta-button">Walk With Us</a>
     </div>
   </main>
 
@@ -184,42 +28,24 @@
     <div class="container">
       <h3>Land Management for Owners and Operators</h3>
       <p class="lede">We work with landowners who want more than a food plot, and with contractors who need boots-on-ground strategy that lasts.</p>
-      <p><a class="btn btn--primary" href="contact.html">Start Your Land Plan</a></p>
     </div>
   </section>
 
-  <!-- (Optional) Footer placeholder -->
-  <footer class="section" style="border-top:1px solid #eee;">
-    <div class="container">
-      <p>&copy; <span id="year"></span> 23 Timber Co.</p>
-    </div>
-  </footer>
+  <!-- Shared footer will load here -->
+  <div id="site-footer"></div>
 
-  <!-- JS: header shadow, reduced-motion, snake animation -->
+  <script src="assets/include.js"></script>
   <script>
-    // Sticky shadow cue
+    // Handle sticky header shadow
     document.addEventListener('scroll', () => {
       document.documentElement.classList.toggle('is-scrolled', window.scrollY > 4);
     });
-
-    // Respect reduced motion for hero video
+    // Handle reduced motion (disable autoplay if set)
     document.addEventListener('DOMContentLoaded', () => {
       const v = document.getElementById('heroVideo');
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         if (v) { v.removeAttribute('autoplay'); v.pause?.(); }
       }
-      // year
-      const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
-    });
-
-    // Snake animation: delay navigation so the sweep finishes
-    document.querySelectorAll('.snake-link').forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        this.classList.add('snake-active');
-        const href = this.getAttribute('href');
-        setTimeout(() => { window.location.href = href; }, 480);
-      });
     });
   </script>
 </body>
