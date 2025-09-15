@@ -84,6 +84,12 @@ footer{background:#0f1410;border-top:1px solid rgba(255,255,255,.06);padding:1re
 /* About hero */
 .hero-about{background:#0f1410;padding:3rem 0;text-align:center}
 
+/* Nudge overlay higher so deer are visible */
+.hero .overlay {
+  top: -10vh; /* adjust this value until it looks right */
+}
+
+
 /* Keep header above all background sections */
 header { position: sticky; top: 0; z-index: 1000; }
 
