@@ -3,48 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>For Contractors – Site Clearing & Access | 23 Timber Co.</title>
-  <meta name="description" content="Reliable site clearing, erosion control, and access lanes with attention to slope, soils, and drainage.">
+  <title>For Contractors | 23 Timber Co.</title>
   <meta name="theme-color" content="#0f1410">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-    <meta property="og:site_name" content="23 Timber Co.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="images/og-forest.jpg">
-  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<script src="assets/include.js"></script>
 <body>
-<a href="#main" class="skip">Skip to content</a>
-<div id="site-header"></div>
-<main id="main" class="intro">
-  <h1>For Contractors</h1>
-  <p class="lede">Reliable site clearing, erosion control, and access lanes — built with slope, soils, and drainage in mind.</p>
-  <section class="section narrow">
-    <div class="container cards">
-      <article class="card"><h4>Site Clearing &amp; Prep</h4><p>Trees, brush, stumps, debris — flagged buffer zones protected.</p></article>
-      <article class="card"><h4>Erosion Control &amp; Compliance</h4><p>Silt fence, wattles, and pre-clearing walks with ConCom when required.</p></article>
-      <article class="card"><h4>Trail &amp; Equipment Access</h4><p>Temporary or permanent access lanes for machines and utilities.</p></article>
-    </div>
-  </section>
-  <p><a href="contact.html" class="cta-button">Partner With Us</a></p>
-</main>
-<div id="site-footer"></div>
-<script>
-  document.addEventListener('scroll', ()=> {
-    document.documentElement.classList.toggle('is-scrolled', window.scrollY>4);
-  });
-  document.addEventListener('DOMContentLoaded', ()=>{
-    const btn=document.querySelector('.nav-toggle'); const wrap=document.querySelector('header .nav');
-    const links=[...document.querySelectorAll('#primary-menu a')];
-    const toggle=()=>{
-      const open=wrap.classList.toggle('open');
-      btn?.setAttribute('aria-expanded', String(open));
-      document.documentElement.classList.toggle('no-scroll', open);
-    };
-    btn?.addEventListener('click', toggle);
-    links.forEach(a=>a.addEventListener('click', ()=>{ if(wrap.classList.contains('open')) toggle(); }));
-  });
-</script>
+  <a href="#main" class="skip">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main" class="page container">
+    <h1>For Contractors</h1><p class='lede'>Execution and coordination you can count on.</p><hr><p>Copy TBD.</p>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/include.js"></script>
 </body>
 </html>
