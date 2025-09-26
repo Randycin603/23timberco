@@ -3,20 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Process | 23 Timber Co.</title>
+  <title>Our Process – From Walkthrough to Results | 23 Timber Co.</title>
+  <meta name="description" content="A structured, no-fluff approach: site walk, goals, proposal, execution, and review.">
   <meta name="theme-color" content="#0f1410">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <meta property="og:site_name" content="23 Timber Co.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-forest.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="styles.css" />
 </head>
+<script src="assets/include.js"></script>
 <body>
-  <a href="#main" class="skip">Skip to content</a>
-  <div id="site-header"></div>
-
-  <main id="main" class="page container">
-    <h1>Our Process</h1><p class='lede'>Clear phases, clear estimates, clear results.</p><hr><p>Copy TBD.</p>
-  </main>
-
-  <div id="site-footer"></div>
-  <script src="assets/include.js"></script>
+<a href="#main" class="skip">Skip to content</a>
+<div id="site-header"></div>
+<main id="main" class="intro">
+  <h1>Our Process</h1>
+  <p class="lede">Structured, efficient, and focused on results that last.</p>
+  <ol style="text-align:left; max-width:700px; margin:2rem auto;">
+    <li><strong>Initial Contact:</strong> Goals, timing, access, property background.</li>
+    <li><strong>Site Walkthrough:</strong> We walk the land together.</li>
+    <li><strong>Goal Clarification:</strong> Define success: habitat, hunting, timber, recreation, resale.</li>
+    <li><strong>Proposal + Plan:</strong> Phased work, full scope, or advisory only.</li>
+    <li><strong>Execution:</strong> On-site, equipment in place, with you in the loop — or hands-off.</li>
+    <li><strong>Review &amp; Adjust:</strong> Walk it again and tune based on results.</li>
+  </ol>
+  <p><a href="contact.html" class="cta-button">Schedule a Walkthrough</a></p>
+</main>
+<div id="site-footer"></div>
+<script>
+  document.addEventListener('scroll', ()=> {
+    document.documentElement.classList.toggle('is-scrolled', window.scrollY>4);
+  });
+  document.addEventListener('DOMContentLoaded', ()=>{
+    const btn=document.querySelector('.nav-toggle'); const wrap=document.querySelector('header .nav');
+    const links=[...document.querySelectorAll('#primary-menu a')];
+    const toggle=()=>{
+      const open=wrap.classList.toggle('open');
+      btn?.setAttribute('aria-expanded', String(open));
+      document.documentElement.classList.toggle('no-scroll', open);
+    };
+    btn?.addEventListener('click', toggle);
+    links.forEach(a=>a.addEventListener('click', ()=>{ if(wrap.classList.contains('open')) toggle(); }));
+  });
+</script>
 </body>
 </html>
