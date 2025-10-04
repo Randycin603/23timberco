@@ -62,7 +62,7 @@ nav a[aria-current="page"]{position:relative;color:#8dc27a}
 }
 
 /* Buttons */
-.button,.cta-button{display:inline-block;background:#8dc27a;color:#0f1410;padding:.6rem 1.2rem;border-radius:8px;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.button,.cta-button{display:inline-block;background:#6b8f71;color:#0f1410;padding:.6rem 1.2rem;border-radius:8px;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.25)}
 .button:hover,.cta-button:hover{filter:brightness(.95)}
 
 /* Cards */
@@ -132,4 +132,40 @@ form .row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 
 .hero { align-items: flex-start; }
 .hero .overlay { margin-top: 20vh; }
+
+
+/* Header CTA sizing: prevent full-height stretch */
+nav a.button { 
+  line-height: 1.2 !important; 
+  padding: .5rem .9rem !important; 
+  border-radius: 10px; 
+}
+
+/* Slightly darker hover for CTA */
+nav a.button:hover { 
+  filter: none; 
+  background: #5f8165;
+}
+
+
+/* Animated bottom underline for top nav */
+nav ul > li > a {
+  position: relative;
+}
+nav ul > li > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 14px;           /* sits near text baseline */
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  background: currentColor;
+  transition: transform .25s ease;
+}
+nav ul > li > a:hover::after,
+nav ul > li > a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
 
