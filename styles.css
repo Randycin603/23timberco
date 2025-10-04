@@ -168,4 +168,18 @@ nav ul > li > a:hover::after,
 nav ul > li > a[aria-current="page"]::after {
   transform: scaleX(1);
 }
+/* Shrink the header CTA button (Contact) */
+nav a.button{
+  line-height: 1.2 !important;   /* stop it from inheriting the 64px line-height */
+  padding: .5rem .9rem !important;/* give it normal button padding */
+  border-radius: 10px;            /* keep your rounded look */
+  display: inline-block;          /* make sure it's sized to its content */
+}
 
+/* Mobile menu: keep the CTA compact there too */
+@media (max-width: 900px){
+  nav.open ul a.button{
+    line-height: 1.2 !important;
+    padding: .6rem .9rem !important;
+  }
+}
